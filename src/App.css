@@ -1,39 +1,880 @@
-.App {
-  text-align: center;
-}
+/* .App {
+} */
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+	.App-logo {
+		animation: App-logo-float infinite 3s ease-in-out;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 1px grey;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #0077b6;
+	border-radius: 10px;
 }
 
 .App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
 }
 
 .App-link {
-  color: rgb(112, 76, 182);
+	color: rgb(112, 76, 182);
 }
 
 @keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	background-color: #ffffff;
+	width: 100%;
+	border-bottom: 1px solid #a4a4a4;
+	z-index: 1000;
+}
+
+.navbar-menu {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.apply-button .navbar-apply-link {
+	text-decoration: none;
+}
+
+.navbar-menu a {
+	color: #000000;
+	text-decoration: none;
+	margin: 15px;
+}
+
+.navbar-menu a:hover {
+	border-bottom: 1px solid #000000;
+	transition: all 0.3s ease-in-out;
+	transform: scale(1.1);
+}
+
+.navbar-contact-apply {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-span-pn {
+	padding-right: 50px;
+}
+
+.navbar-span-pn .navbar-pn {
+	cursor: pointer;
+}
+
+.apply-button {
+	padding-right: 50px;
+}
+
+.navbar-span-pn .navbar-pn:hover {
+	transition: 0.3s ease-in-out;
+	color: #0077b6;
+}
+
+.navbar-apply-link {
+	color: #f2f2f2;
+	background-color: #ff3355;
+	padding: 8px 20px;
+	border-radius: 100px;
+	transition: all 0.3s ease-in-out;
+}
+
+.navbar-apply-link:hover {
+	background-color: #0077b6;
+	transform: scale(1.1);
+}
+
+.navbar-logo img {
+	margin-left: 100px;
+	height: 45px;
+	width: 125px;
+	padding-top: 15px;
+}
+
+.movie-callcard-container video {
+	position: relative;
+	top: 15 0px;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	object-fit: contain;
+	z-index: -1;
+}
+
+.description-block-container {
+	margin-top: 50px;
+	padding-left: 25px;
+	padding-right: 25px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.description-block-container img {
+	height: 275px;
+	width: 400px;
+}
+
+.div-info-one,
+.div-info-second,
+.div-info-third {
+	width: 400px;
+}
+
+.div-info-all-one,
+.div-info-all-second,
+.div-info-all-third {
+	background-color: #0077b6;
+	transition: 0.5s ease;
+	cursor: pointer;
+	padding: 10px;
+	color: #ffffff;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.div-info-all-one:hover,
+.div-info-all-second:hover,
+.div-info-all-third:hover {
+	background-color: #ff3355;
+}
+
+.div-info-one-text,
+.div-info-second-text,
+.div-info-third-text {
+	overflow-wrap: break-word;
+	font-size: 17px;
+}
+
+.description-child-one,
+.description-child-second,
+.description-child-third {
+	display: flex;
+	flex-direction: column;
+}
+
+.div-info-image-one img {
+	display: block;
+	max-width: 100%;
+}
+
+.div-info-image-second img {
+	display: block;
+	max-width: 100%;
+}
+.div-info-image-third img {
+	display: block;
+	max-width: 100%;
+}
+
+.div-info-all-one h2 {
+	margin-top: 0;
+}
+.div-info-all-second h2 {
+	margin-top: 0;
+}
+.div-info-all-third h2 {
+	margin-top: 0;
+}
+
+.info-about-trucking-system {
+	margin-top: 100px;
+	text-align: center;
+}
+
+.info-h1 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info-h6-title {
+	font-size: 18px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	line-height: 26px;
+	font-style: normal;
+	font-weight: 300;
+	letter-spacing: 0px;
+	text-transform: none;
+	padding-bottom: 50px;
+}
+
+.info-box-trucking-system-h6 {
+	padding: 0% 15% 0% 15%;
+}
+
+.truck-info-benefit-container {
+	display: flex;
+	padding-bottom: 2%;
+	padding-top: 2%;
+	background-color: #f2f2f2;
+}
+
+.truck-info-benefit-album img {
+	padding-left: 75px;
+	width: 100%;
+	height: 100%;
+}
+
+.truck-info-benefit-description {
+	padding-left: 150px;
+	padding-right: 50px;
+	padding-top: 50px;
+}
+
+.truck-info-benefit-text {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 300;
+	letter-spacing: 0px;
+}
+
+.truck-info-benefit-h4 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 26px;
+	line-height: 35px;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 0px;
+	text-transform: capitalize;
+	color: #ff3355;
+}
+
+.truck-info-benefit-list {
+	padding-left: 10px;
+}
+
+.truck-info-benefit-list li {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: #0077b6;
+	margin-bottom: 20px;
+	list-style: none;
+}
+
+.join-our-team-container {
+	display: flex;
+	flex-direction: column;
+	padding: 50px;
+	text-align: center;
+}
+
+.join-our-team-h1 {
+	color: #ff3355;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 40px;
+	line-height: 48px;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 0px;
+	text-transform: none;
+}
+
+.join-our-team-img img {
+	width: 600px;
+	height: 500px;
+}
+
+.join-our-team-list {
+	list-style: none;
+	text-align: left;
+	padding-left: 0px;
+	padding-bottom: 5px;
+}
+.join-our-team-list li {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: #ff3355;
+	margin-bottom: 30px;
+	list-style: none;
+}
+
+.join-our-team-info {
+	display: flex;
+	padding: 5%;
+}
+
+.join-our-team-h4 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 18px;
+	text-align: left;
+	font-weight: 500;
+	color: #000000;
+	margin-bottom: 30px;
+	list-style: none;
+}
+
+.join-our-team-career {
+	display: flex;
+	flex-direction: column;
+	padding: 3% 5% 2% 5%;
+	background-color: #f2f2f2;
+}
+
+.join-our-team-h4 {
+	padding-bottom: 4%;
+}
+
+.join-our-team-button-block {
+	display: flex;
+}
+
+.join-our-team-button {
+	background-color: #ff3355;
+	color: #ffffff;
+	border: none;
+	padding: 15px 30px;
+	border-radius: 5%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.join-our-team-button:hover {
+	background-color: #ffffff;
+	color: #ff3355;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	transform: scale(1.1);
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	background-color: #0077b6;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	bottom: 0;
+}
+
+.footer-child-one,
+.footer-child-two,
+.footer-child-three {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.footer-child-one img {
+	padding-top: 25px;
+	width: 300px;
+	height: 75px;
+}
+
+.footer-child-one {
+	display: flex;
+	flex-direction: column;
+	padding: 0 75px;
+}
+
+.footer-h4-text {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	text-align: left;
+	font-weight: 500;
+	color: #f2f2f2;
+	margin-bottom: 30px;
+	list-style: none;
+}
+
+.footer-h3-text {
+	color: #f2f2f2;
+	text-shadow: 1px 1px 2px black;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-style: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin: 10px 0;
+}
+
+.footer-list {
+	padding-left: 0px;
+	width: 150px;
+}
+
+.social-icons-block {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 1px;
+}
+
+.social-icons-block div {
+	margin-right: 15px;
+}
+
+.social-icons-block svg {
+	color: #f2f2f2;
+}
+
+.social-icons-block div :hover {
+	transition: all 0.2s ease-in-out;
+	color: #ff3355;
+	transform: scale(1.05);
+}
+
+.footer-list li {
+	width: 150px;
+	display: flex;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: #f2f2f2;
+	text-shadow: 1px 1px 2px black;
+	margin-bottom: 10px;
+	list-style: none;
+}
+
+.services-info-container {
+	padding-top: 100px;
+}
+
+.services-info-about-company {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.services-info-h2 {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	color: #ff3355;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: 300;
+	letter-spacing: 0px;
+}
+
+.services-info-h6 {
+	color: #4d4d4d;
+	margin-top: 0px;
+	padding: 0% 15%;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 300;
+}
+
+.services-list-info-block-1,
+.services-list-info-block-2,
+.services-list-info-block-3 {
+	display: flex;
+	padding: 2% 10%;
+}
+
+.services-list-image-1 img {
+	width: 650px;
+	height: 500px;
+}
+
+.services-list-info-text-1 {
+	padding-right: 7%;
+	color: #4d4d4d;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;
+}
+
+.services-list-image-2 img {
+	width: 650px;
+	height: 500px;
+}
+
+.services-list-info-text-2 {
+	padding-left: 7%;
+	color: #4d4d4d;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;
+}
+
+.services-request-quote {
+	margin-top: 2.5%;
+	background-color: #0077b6;
+	color: #ffffff;
+	border: none;
+	padding: 15px 30px;
+	border-radius: 5%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.services-request-quote:hover {
+	background-color: #ffffff;
+	color: #0077b6;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	transform: scale(1.1);
+}
+
+.contacts-global-container {
+	display: flex;
+	padding: 11% 12%;
+}
+
+.contacts-phone-number {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15%;
+}
+
+.our-contacts-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+	margin-right: 15%;
+}
+
+.contacts-h2 {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	color: #232222;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	letter-spacing: 2px;
+}
+
+.phone-number-company-span {
+	padding-top: 5px;
+	padding-left: 25px;
+	color: #4d4d4d;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.contacts-email {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15%;
+}
+
+.email-company-span {
+	padding-top: 5px;
+	padding-left: 25px;
+	color: #4d4d4d;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.work-time {
+	display: flex;
+	flex-direction: column;
+}
+
+.work-time-company-span {
+	padding-top: 5px;
+	padding-left: 25px;
+	color: #4d4d4d;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.border-bottom-our-contacts {
+	padding-top: 3%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 1;
+	border-bottom: 1px solid #000000;
+	opacity: 0.15;
+}
+
+.submit-contacts-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.h1-contacts {
+	margin-top: 0;
+	color: #2d2d2d;
+}
+
+.contacts-input-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.contacts-input-info input {
+	background-color: #f8f8f8;
+	padding: 15px;
+	border: 1px solid #7b7b7b;
+	margin-bottom: 15px;
+	width: 600px;
+	color: #8f8f8f;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 18px;
+}
+
+.contacts-input-info input:last-child {
+	height: 100px;
+}
+
+.submit-button-1 {
+	text-transform: uppercase;
+	background-color: #ffffff;
+	color: #ff3355;
+	border: none;
+	padding: 5px 25px;
+	border-radius: 100px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.submit-button-1:hover {
+	background-color: #ff3355;
+	color: #ffffff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	transform: scale(1.1);
+}
+
+.join-our-group-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.join-our-group-h1 {
+	margin: 0;
+	padding: 10% 30% 0% 30%;
+	text-align: center;
+	margin-top: 5px;
+	color: #232222;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.join-our-group-p {
+	padding: 0% 20%;
+	text-align: center;
+	color: #4d4d4d;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.join-our-group-button {
+	text-align: center;
+	padding: 2% 0%;
+}
+
+.jog-button {
+	background-color: #ff3355;
+	color: #ffffff;
+	border: none;
+	padding: 15px 30px;
+	border-radius: 5%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.jog-button:hover {
+	background-color: #ffffff;
+	color: #ff3355;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	transform: scale(1.1);
+}
+
+.careers-form-container {
+	padding: 5% 0%;
+	display: flex;
+	flex-direction: column;
+}
+
+.join-our-team-align {
+	text-align: center;
+}
+
+.join-our-team-apply-text {
+	text-align: center;
+}
+.jot-h1 {
+	padding-left: 12.5%;
+	margin-top: 5px;
+	color: #f2f2f2;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 0;
+}
+
+.apply-now-summon {
+	padding-top: 2%;
+}
+
+.apply-now-h2 {
+	color: #f2f2f2;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+
+.apply-now-p {
+	text-align: center;
+	color: #f2f2f2;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: 0;
+}
+
+.application-form-title {
+	color: #232222;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+
+.border-bottom-jot {
+	border-bottom: 3px solid #f2f2f2;
+	margin-left: 12.5%;
+	width: 75%;
+}
+
+.apply-now-p {
+	padding: 0% 25%;
+}
+
+.application-form-title {
+	padding: 3% 0% 1% 0%;
+}
+
+.align-center-submit {
+	padding: 0% 29%;
+}
+
+.join-our-team-background {
+	background: url(./content/trucks-blur.jpg) no-repeat center center;
+}
+
+.modal {
+	margin-top: 20px;
+	max-width: 600px;
+	width: 100%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+}
+
+.modal__overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+}
+
+.modal-work-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-list-modal {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+}
+
+.form-list-modal div {
+	margin-bottom: 2%;
+}
+
+.modal__content {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 1rem;
+}
+
+.modal-button-close {
+	padding: 8px 10px;
+	margin: 150px 10px 0px 10px;
+	align-self: center;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.modal-button-close:hover {
+	color: #f2f2f2;
+	transform: scale(1.1);
+	background-color: #ff3355;
+}
+
+.alert-msg {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	position: fixed;
+	padding: 10px 30px;
+	border-radius: 4px;
+	background-color: #0077b6;
+	color: white;
+	z-index: 1000;
+}
+
+.alert-msg.show {
+	opacity: 1;
+}
+
+.about-info-container {
+	padding-top: 15%;
+	margin-bottom: 17.5%;
+}
+
+.about-info-h1 {
+	text-align: center;
 }
