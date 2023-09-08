@@ -1,5 +1,6 @@
 import nav_logo from '../../content/truck-logo-removebg-preview.png';
 import { useState } from 'react';
+import BurgerMenu from '../BurgerMenu';
 
 export const NavBar = () => {
 	const [copied, setCopied] = useState(false);
@@ -30,6 +31,7 @@ export const NavBar = () => {
 					/>
 				</a>
 			</div>
+			{/* <BurgerMenu> */}
 			<div className="navbar-menu">
 				<a
 					href="/"
@@ -57,6 +59,7 @@ export const NavBar = () => {
 					Careers
 				</a>
 			</div>
+			{/* </BurgerMenu> */}
 			<div className="navbar-contact-apply">
 				<span className="navbar-span-pn">
 					<p

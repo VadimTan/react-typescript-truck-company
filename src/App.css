@@ -376,7 +376,6 @@
 	background-color: #0077b6;
 	padding-top: 1%;
 	padding-bottom: 1%;
-	bottom: 0;
 }
 
 .footer-child-one,
@@ -877,4 +876,33 @@
 
 .about-info-h1 {
 	text-align: center;
+}
+
+.burger-btn {
+	width: 30px;
+	height: 30px;
+	margin-left: 20px;
+	position: relative;
+}
+
+.burger-btn:before {
+	content: '';
+	position: absolute;
+	top: 0;
+}
+
+.burger-btn:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+}
+
+@media screen and (min-width: 800px) {
+	.navbar-menu {
+		display: flex;
+		/* flex-direction: column; */
+	}
+
+	.burger-menu {
+	}
 }
