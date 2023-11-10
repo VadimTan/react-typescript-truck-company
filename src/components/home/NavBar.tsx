@@ -1,6 +1,6 @@
 import nav_logo from '../../content/truck-logo-removebg-preview.png';
 import { useState } from 'react';
-import BurgerMenu from '../BurgerMenu';
+// import BurgerMenu from '../BurgerMenu';
 
 export const NavBar = () => {
 	const [copied, setCopied] = useState(false);
