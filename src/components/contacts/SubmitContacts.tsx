@@ -5,6 +5,8 @@ export const SubmitContacts = () => {
 	const form = useRef<HTMLFormElement>(null);
 
 	const sendEmail = (e: any) => {
+		e.preventDefault();
+
 		const text1 = 'service_xzkt0ve';
 		const text2 = 'template_cnum5gj';
 

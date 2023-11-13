@@ -1,4 +1,27 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 export const CareersForm = () => {
+	const form = useRef<HTMLFormElement>(null);
+
+	const sendEmail = (e: any) => {
+		e.preventDefault();
+
+		const text1 = 'service_xzkt0ve';
+		const text2 = 'template_cnum5gj';
+
+		emailjs.sendForm(text1, text2, form.current!, '0SkinJueGQAAAPzeL').then(
+			(result) => {
+				alert(
+					`Your message was sent successfully! Status code: ${result.text}`
+				);
+			},
+			(error) => {
+				alert(`Try again! Status code: ${error.text}`);
+			}
+		);
+	};
+
 	return (
 		<div className="careers-form-container">
 			<div className="join-our-team-background">
@@ -27,15 +50,34 @@ export const CareersForm = () => {
 					<h2 className="application-form-title">Application Form</h2>
 					<div className="submit-contacts-container">
 						<div className="align-center-submit">
-							<div className="contacts-input-info">
-								<input placeholder="Name"></input>
-								<input placeholder="Phone Number"></input>
-								<input placeholder="Email"></input>
-								<input placeholder="Message"></input>
-							</div>
-						</div>
-						<div className="submit-contacts-button">
-							<button className="submit-button-1">Submit</button>
+							<form
+								ref={form}
+								onSubmit={sendEmail}
+								className="contacts-input-info">
+								<input
+									type="text"
+									name="user_name"
+									placeholder="Name"
+								/>
+								<input
+									type="text"
+									name="user_phone-number"
+									placeholder="Phone Number"
+								/>
+								<input
+									type="text"
+									name="user_email"
+									placeholder="Email"
+								/>
+								<textarea
+									className="textarea-careers-form"
+									name="user_message"
+									placeholder="Message"
+								/>
+								<div className="submit-contacts-button">
+									<button className="submit-button-1">Submit</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
