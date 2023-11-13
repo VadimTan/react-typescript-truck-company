@@ -4,21 +4,18 @@ import emailjs from '@emailjs/browser';
 export const SubmitContacts = () => {
 	const form = useRef<HTMLFormElement>(null);
 
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const sendEmail = (e: any) => {
-		e.preventDefault();
-
 		const text1 = 'service_xzkt0ve';
 		const text2 = 'template_cnum5gj';
 
 		emailjs.sendForm(text1, text2, form.current!, '0SkinJueGQAAAPzeL').then(
 			(result) => {
-				console.log(result.text);
-				alert('Your message was sent successfully!');
+				alert(
+					`Your message was sent successfully! Status code: ${result.text}`
+				);
 			},
 			(error) => {
-				console.log(error.text);
-				alert('Try again!');
+				alert(`Try again! Status code: ${error.text}`);
 			}
 		);
 	};
@@ -35,19 +32,23 @@ export const SubmitContacts = () => {
 					<input
 						type="text"
 						name="user_name"
-						placeholder="Name"></input>
+						placeholder="Name"
+					/>
 					<input
 						type="text"
 						name="user_phone-number"
-						placeholder="Phone Number"></input>
+						placeholder="Phone Number"
+					/>
 					<input
 						type="text"
 						name="user_email"
-						placeholder="Email"></input>
+						placeholder="Email"
+					/>
 					<input
 						type="text"
 						name="user_message"
-						placeholder="Message"></input>
+						placeholder="Message"
+					/>
 				</div>
 				<div className="submit-contacts-button">
 					<button
